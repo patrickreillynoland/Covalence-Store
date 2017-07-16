@@ -5,7 +5,7 @@ exports.stateRouting = function(req, res, next) {
     if (isAsset(req.url)) {
         return next(); //Call the next route handler
     } else {
-        res.sendFile('index.html');
+        res.sendFile(path.join(clientPath, 'index.html'));
     }
 }
 
