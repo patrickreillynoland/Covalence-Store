@@ -1,7 +1,7 @@
 var db = require('../config/db');
 
-exports.getCategory = function(categoryid) {
-    return db.rows('GetCategory', [categoryid]);
+exports.getProductsByCategory = function(categoryid) {
+    return db.rows('GetProductsByCategory', [categoryid]);
 }
 
 exports.read = function(id) {
