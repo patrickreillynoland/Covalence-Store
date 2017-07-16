@@ -5,6 +5,10 @@ angular.module('CovalenceStore', ['ngRoute', 'ngResource', 'CovalenceStore.contr
     .when('/', {
         templateUrl: 'views/welcome.html'
     })
+     .when('/products/:id', {
+        templateUrl: 'views/products.html',
+        controller: 'CategoryController'
+    })
     .when('/products', {
         templateUrl: 'views/products.html',
         controller: 'ProductsController'
