@@ -26,7 +26,11 @@
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
     "prerender": "^4.4.1",
+<<<<<<< HEAD
     "prerender-node": "^2.7.2",
+=======
+    "sendgrid": "^5.1.2",
+>>>>>>> 476772afeb9dff7cafa3d8b878c2904fad7b5517
     "stripe": "^4.23.1"
   }
 }
