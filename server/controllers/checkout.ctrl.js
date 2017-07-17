@@ -1,5 +1,5 @@
 var express = require('express');
-var stripe = require('../services/stripe.svc');
+var stripeSvc = require('../services/stripe.svc');
 
 var router = express.Router();
 

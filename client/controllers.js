@@ -22,12 +22,12 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
             } else {
                 // result.token is card token
                 console.log(result.token);
-                var d = new Donation({
+                var c = new Checkout({
                     token: result.token.id,
                     amount: $scope.amount
                 });
-                d.$save(function() {
-                    alert('Thank you for the donation!');
+                c.$save(function() {
+                    alert('Purchase complete! Delivery will take between 2 - 4 weeks.');
                     $location.path('/');
                 }, function(err) {
                     console.log(err);
