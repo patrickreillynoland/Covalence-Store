@@ -5,14 +5,11 @@ angular.module('CovalenceStore', ['ngRoute', 'ngResource', 'CovalenceStore.contr
     .when('/', {
         templateUrl: 'views/welcome.html'
     })
-     .when('/products/:id', {
-        templateUrl: 'views/products.html',
+     .when('/category/:id', {
+        templateUrl: 'views/category.html',
         controller: 'CategoryController'
     })
-    .when('/products', {
-        templateUrl: 'views/products.html',
-        controller: 'ProductsController'
-    })
+    // Change "Products" to Category, make "Products" for single view.
     .otherwise({
         redirectTo: '/'
     });
