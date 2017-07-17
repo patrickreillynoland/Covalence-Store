@@ -10,6 +10,10 @@ angular.module('CovalenceStore', ['ngRoute', 'ngResource', 'CovalenceStore.contr
         controller: 'CategoryController'
     })
     // Change "Products" to Category, make "Products" for single view.
+    .when('/contactus', {
+        templateUrl: 'views/contact.html',
+        controller: 'ContactController'
+    })
     .otherwise({
         redirectTo: '/'
     });
