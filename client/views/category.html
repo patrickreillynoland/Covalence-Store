@@ -1,6 +1,7 @@
-<h1>Here are the Products:</h1>
+<div class="container">
+    <img class="jumbotron" src="{{ category.categoryherourl }}"/>
+</div>
 <ul id="product-list">
-    <img src="{{ category.categoryherourl }}"/>
     <li ng-repeat="product in category">
         <div class="container">
             <div class="col-mid-8">
