@@ -9,10 +9,10 @@ angular.module('CovalenceStore', ['ngRoute', 'ngResource', 'CovalenceStore.contr
         templateUrl: 'views/products.html',
         controller: 'CategoryController'
     })
-    .when('/products', {
-        templateUrl: 'views/products.html',
-        controller: 'ProductsController'
-    })
+    // .when('/products', {
+    //     templateUrl: 'views/products.html',
+    //     controller: 'ProductsController'
+    // })
     .otherwise({
         redirectTo: '/'
     });
