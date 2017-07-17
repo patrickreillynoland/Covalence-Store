@@ -13,6 +13,10 @@ angular.module('CovalenceStore', ['ngRoute', 'ngResource', 'CovalenceStore.contr
         templateUrl: 'views/checkout.html',
         controller: 'CheckoutController'
     })
+    .when('/contactus', {
+        templateUrl: 'views/contact.html',
+        controller: 'ContactController'
+    })
     .otherwise({
         redirectTo: '/'
     });
