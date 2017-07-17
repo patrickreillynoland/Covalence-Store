@@ -6,3 +6,6 @@ angular.module('CovalenceStore.factories', ['ngRoute', 'ngResource'])
         }
     });
 }])
+.factory('Checkout', ['$resource', function($resource) {
+    return $resource('/api/checkout/:id');
+}]);
