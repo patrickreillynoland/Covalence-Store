@@ -1,7 +1,18 @@
+/* General Styling */
+@font-face {
+    font-family: BrandonGrotesque-Black;
+    src: url("BrandonGrotesque-Black.otf") format("opentype");
+}
+
 ul {
     list-style: none;
 }
 
+.cov-font {
+    font-family: 'BrandonGrotesque-Black', sans-serif;
+}
+
+/* Index Styling */
 #nav-header-box {
     height: 80px;
 }
@@ -15,6 +26,39 @@ ul {
     margin: 10px 80px;
 }
 
+/* Contact Us */
 #contactus {
     max-width: 500px;
+}
+
+/* Checkout Page */
+#checkout-content-box {
+    padding: 40px;
+    border: 2px solid lightgrey;
+    border-radius: 10px;
+}
+
+.list-number-box {
+    height: 2em;
+    width: 2em;
+    display: flex;
+    background-color: #4ac3b4;
+    position: absolute;
+    border-radius: 50%;
+    margin-left: -35px;
+}
+
+.list-number {
+    position: absolute;
+    left: 40%;
+    top: 25%;
+    display: flex;
+    /* width: 2em; */
+    /* height: 2em; */
+    text-align: center;
+    color: white;
+    vertical-align: middle;
+    justify-content: center;
+    /* border-radius: 50%; */
+    margin: 0;
 }
