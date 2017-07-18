@@ -1,9 +1,9 @@
-angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.factories'])
+angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.factories', 'CovalenceStore.services'])
 .controller('CategoryController', ['$scope', '$location', '$routeParams', 'Category', function($scope, $location, $routeParams, Product) {
     $scope.category=Product.query({ id : $routeParams.id });
 }])
 
-.controller('productController', ['$scope', '$location', '$routeParams', 'Product',function($scope, $location,$routeParams, Product){
+.controller('productController', ['$scope', '$location', '$routeParams', 'Product', function($scope, $location, $routeParams, Product){
     $scope.product = Product.get({ id : $routeParams.id })
 }])
 .controller('CheckoutController', ['$scope', '$location', 'Checkout', function($scope, $location, Checkout) {
@@ -55,4 +55,9 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
             console.log(err);
         });
     }
-}]);
+}])
+.controller('CartController', ['$scope', '$location', '$http', 'CartService', function($scope, $location, $http, CartService) {
+    $scope.showCart = function() {
+        console.log(cart);
+    }
+}])

@@ -4,14 +4,14 @@
 <ul id="product-list">
     <li ng-repeat="product in category">
         <div class="container">
-            <div class="col-mid-8">
+            <div class="col-md-8">
                 <h3>{{ product.title }}</h3>
                 <p>{{ product.description }}</p>
-                <h4>{{ product.price | currency }}</h6>
+                <h4>{{ product.price | currency }}</h4>
                 <a ng-href="product/{{ product.id }}">
-                <div class="col-md-3">
-                <img src="{{ product.imageurl }}"/>
-                </div>
+                    <div class="col-md-3">
+                        <img ng-src="{{ product.imageurl }}" />
+                    </div>
                 </a>
             </div>
         </div>
