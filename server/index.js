@@ -9,8 +9,8 @@ var routing = require('./middleware/routing.mw');
 
 var clientPath = path.join(__dirname, '../client');
 
-prerender.set('prerenderToken', process.env.PRERENDER_TOKEN); //this needs to be protected before putting into github
-//prerender.set('prerenderServiceUrl', 'http://localhost:1337/'); //this is to test, comment when it shows it works well
+//prerender.set('prerenderToken', process.env.PRERENDER_TOKEN); //this needs to be protected before putting into github
+prerender.set('prerenderServiceUrl', 'http://localhost:1337/'); //this is to test, comment when it shows it works well
 //ENVIRO variable 
 
 var app = express();
