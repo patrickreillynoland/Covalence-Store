@@ -41,6 +41,7 @@
                     <input class="form-control" type="number" step=".01" ng-model="amount" placeholder="Amount">
                 </div>
                 <div class="alert alert-danger" role="alert" ng-hide="errorMessage.length === 0">{{ errorMessage }}</div>
+                <!--<div class="alert alert-danger" ng-show="errorMessage.length >= 1" role="alert">{{errorMessage}}</div>-->
                 <input class="btn btn-info cov-font" type="submit" value="Submit Your Order">
             </form>  
         </div>

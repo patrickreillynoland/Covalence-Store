@@ -1,12 +1,30 @@
 angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.factories', 'CovalenceStore.services'])
-.controller('CategoryController', ['$scope', '$location', '$routeParams', 'Category', function($scope, $location, $routeParams, Product) {
+.controller('CategoryController', ['SEOService', '$scope', '$location', '$routeParams', 'Category', function(SEOService, $scope, $location, $routeParams, Product) {
+    SEOService.setSEO({
+        title: 'Covalence Products',
+        image: 'http://' + $location.host() + '/images/icon_badge.png',
+        url: $location.url(),
+        description: 'Our quality Covalence products available for purchase in our Covalence Store. We offer a variety of mugs, water bottles, and t-shirts'
+    });
     $scope.category=Product.query({ id : $routeParams.id });
 }])
 
-.controller('productController', ['$scope', '$location', '$routeParams', 'Product', function($scope, $location, $routeParams, Product){
+.controller('productController', ['SEOService', '$scope', '$location', '$routeParams', 'Product',function(SEOService, $scope, $location,$routeParams, Product){
+    SEOService.setSEO({
+        title: 'Covalence Gear',
+        image: 'http://' + $location.host() + '/images/icon_badge.png',
+        url: $location.url(),
+        description: 'Quality Covalence gear to show. Wear it proudly.'
+    });
     $scope.product = Product.get({ id : $routeParams.id })
 }])
-.controller('CheckoutController', ['$scope', '$location', 'Checkout', function($scope, $location, Checkout) {
+.controller('CheckoutController', ['SEOService', '$scope', '$location', 'Checkout', function(SEOService, $scope, $location, Checkout) {
+    SEOService.setSEO({
+            title: 'Checkout',
+            image: 'http://' + $location.host() + '/images/icon_badge.png',
+            url: $location.url(),
+            description: 'Checkout page for all of your quality Covalence products. Thank you for shopping with us.'
+    });
     var elements = stripe.elements();
     var card = elements.create('card');
     card.mount('#card-field');
@@ -29,6 +47,7 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
                 var c = new Checkout({
                     token: result.token.id,
                     amount: $scope.amount
+                    //send token and array of prods and prices to api...use that to do sendgrid on the back end
                 });
                 c.$save(function() {
                     alert('Purchase complete! Delivery will take between 2 - 4 weeks.');
@@ -40,7 +59,13 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
         });
     }
 }])
-.controller('ContactController', ['$scope', '$location', '$http', function($scope, $location, $http) {
+.controller('ContactController', ['SEOService', '$scope', '$location', '$http', function(SEOService, $scope, $location, $http) {
+    SEOService.setSEO({
+        title: 'Contact Us',
+        image: 'http://' + $location.host() + '/images/icon_badge.png',
+        url: $location.url(),
+        description: 'We care about what you think! Please, contact us with any questions or concerns.'
+    })
     $scope.send = function() {
         $http({
             method: 'POST',
