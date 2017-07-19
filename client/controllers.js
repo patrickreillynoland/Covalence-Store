@@ -47,6 +47,7 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
                 var c = new Checkout({
                     token: result.token.id,
                     amount: $scope.amount
+                    //send token and array of prods and prices to api...use that to do sendgrid on the back end
                 });
                 c.$save(function() {
                     alert('Purchase complete! Delivery will take between 2 - 4 weeks.');
