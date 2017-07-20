@@ -94,7 +94,6 @@ body {
     font-size:1.8em;
     color:#fff;
 }
-
 /*welcome message bottom half*/
 #store {
     margin-top:1%; 
@@ -102,22 +101,22 @@ body {
     font-size:1.9em;
     color:#fff;
 }
-
 body, html {
     height: 100%;
 }
-
 /* The hero image */
-#apparel-hero-image {
+#heroimage {
     /* The image used */
     background-image: url("/images/covalence-store-apparel-hero.jpg");
     /* Set a specific height */
-    height: 50%;
+    margin-bottom: 0;
     /* Position and center the image to scale nicely on all screens */
     background-position: center;
     background-repeat: no-repeat;
+    -webkit-background-size: cover;
     background-size: cover;
-    position: relative;
+    height: 50vh;
+   
 }
 /* Place text in the middle of the image */
 #apparel-hero-text {
@@ -148,4 +147,7 @@ body, html {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
+}
+#product-list {
+    float: left;
 }
