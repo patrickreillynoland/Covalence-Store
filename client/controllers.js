@@ -6,9 +6,17 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
         url: $location.url(),
         description: 'Our quality Covalence products available for purchase in our Covalence Store. We offer a variety of mugs, water bottles, and t-shirts'
     });
+    
     $scope.category=Product.query({ id : $routeParams.id });
+        var himage = '';
+        $scope.himage = function() {
+            if ($scope.categoryid.value === 1) {
+                himage = '/images/covalence-store-home.jpg';
+            } else {
+                himage= '/images/covalence-store-home.jpg';
+            } 
+        }  
 }])
-
 .controller('productController', ['SEOService', '$scope', '$location', '$routeParams', 'Product',function(SEOService, $scope, $location,$routeParams, Product){
     SEOService.setSEO({
         title: 'Covalence Gear',
@@ -24,7 +32,7 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
             image: 'http://' + $location.host() + '/images/icon_badge.png',
             url: $location.url(),
             description: 'Checkout page for all of your quality Covalence products. Thank you for shopping with us.'
-    });
+    });   
     var elements = stripe.elements();
     var card = elements.create('card');
     card.mount('#card-field');
@@ -80,5 +88,9 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
             console.log(err);
         });
     }
-}]);
-
+}])
+.controller('CartController', ['$scope', '$location', '$http', 'CartService', function($scope, $location, $http, CartService) {
+    $scope.showCart = function() {
+        console.log(cart);
+    }
+}])

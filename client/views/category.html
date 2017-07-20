@@ -1,9 +1,23 @@
+<<<<<<< HEAD
+<div class="container" data-ng-controller="CategoryController" data-ng-init="himage()">
+    <img class="jumbotron">
+=======
 git <div class="container">
     <img class="jumbotron" src="{{ category.categoryherourl }}"/>
+>>>>>>> bc2cfed103c07e810bfda3c08d7c25894de83f23
 </div>
 <ul id="product-list">
     <li ng-repeat="product in category">
         <div class="container">
+<<<<<<< HEAD
+            <div class="col-mid-8">
+                <div ng-model="categoryid" value="{{ product.categoryid }}"></div>
+                <h3 class="cov-font">{{ product.title }}</h3>
+                <p class="cov-font">{{ product.description }}</p>
+                <h4 class="cov-font">{{ product.price | currency }}</h6>
+                <a ng-href="product/{{ product.id }}">
+                <div class="col-md-3">
+=======
 
             <div class="col-md-12">
                 <h3 class="cov-font">{{ product.title }}</h3>
@@ -13,6 +27,7 @@ git <div class="container">
 
                 <a ng-href="product/{{ product.id }}">
                 <div class="col-md-12">
+>>>>>>> bc2cfed103c07e810bfda3c08d7c25894de83f23
                 <img src="{{ product.imageurl }}" class="img-responsive  img-rounded" alt="Responsive image">
                 </div>
                 </a>
@@ -21,7 +36,10 @@ git <div class="container">
     </li>
 </ul>
 
+<<<<<<< HEAD
+=======
 <nav class="navbar navbar-default navbar-fixed-bottom">
   <div class="container">
       <h1> </h1>
   </div>
+>>>>>>> bc2cfed103c07e810bfda3c08d7c25894de83f23
