@@ -10,7 +10,7 @@
                     <h4>{{ product.price | currency }}</h6>
                     <h3>{{ product.title }}</h3>
                     <p>{{ product.description }}</p>
-                    <input type="submit" class="btn btn-info" value="ADD TO CART">
+                    <input type="submit" class="btn btn-info" value="ADD TO CART" ng-click="basket.addItem(product)">
                 </div>
             </div>
         </div>
