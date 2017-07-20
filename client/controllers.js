@@ -8,14 +8,16 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
     });
     
     $scope.category=Product.query({ id : $routeParams.id });
-        var himage = '';
-        $scope.himage = function() {
-            if ($scope.categoryid.value === 1) {
-                himage = '/images/covalence-store-home.jpg';
+        function view() {
+            var x = document.getElementById("heroimage");
+            console.log($routeParams);
+            if ($routeParams.id == 1) {
+                x.className = "apparelpic"; 
             } else {
-                himage= '/images/covalence-store-home.jpg';
-            } 
-        }  
+                x.className = "miscpic"; 
+            }
+        }
+        view();
 }])
 .controller('productController', ['SEOService', '$scope', '$location', '$routeParams', 'Product', 'CartItem', function(SEOService, $scope, $location,$routeParams, Product, CartItem){
     SEOService.setSEO({

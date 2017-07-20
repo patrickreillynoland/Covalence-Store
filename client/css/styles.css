@@ -106,9 +106,6 @@ body, html {
 }
 /* The hero image */
 #heroimage {
-    /* The image used */
-    background-image: url("/images/covalence-store-apparel-hero.jpg");
-    /* Set a specific height */
     margin-bottom: 0;
     /* Position and center the image to scale nicely on all screens */
     background-position: center;
@@ -118,17 +115,11 @@ body, html {
     height: 50vh;
    
 }
-
-#misc-hero-image {
-    /* The image used */
+.apparelpic {
     background-image: url("/images/covalence-store-apparel-hero.jpg");
-    /* Set a specific height */
-    height: 50%;
-    /* Position and center the image to scale nicely on all screens */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+}
+.miscpic {
+    background-image: url("/images/covalence-store-misc-hero.jpg");
 }
 
 .topnav {
