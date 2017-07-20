@@ -1,1 +1,12 @@
-<h4>Here are your items</h4>
+<ul id="product-list">
+    <li ng-repeat="i in items">
+        <div class="container">
+            <div class="col-mid-8">
+                <h3 class="cov-font">{{ i.title }}</h3>
+                <h4 class="cov-font">{{ i.price | currency }}</h6>
+                <img ng-src="{{ i.imageurl }}" class="img-responsive img-rounded" alt="Responsive image">
+                </div>
+                </a>
+        </div>
+    </li>
+</ul>

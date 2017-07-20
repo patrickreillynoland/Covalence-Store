@@ -98,11 +98,6 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
     }
 }])
 .controller('CartController', ['$scope', '$location', '$http', 'CartItem', function($scope, $location, $http, CartItem) {
-    $scope.showCart = function() {
-        console.log(basket);
-    }
-
-    $scope.newItem = {};
-        
-    $scope.basket = basket;
+     $scope.items = CartItem.items;
+     console.log(items);
 }])
