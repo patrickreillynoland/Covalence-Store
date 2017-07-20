@@ -148,6 +148,21 @@ body, html {
     transform: translate(-50%, -50%);
     color: white;
 }
+<<<<<<< HEAD
 #product-list {
     float: left;
 }
+=======
+.badge{
+    text-align: right;   
+}
+
+#copyright {
+  text-align:right;
+  padding: 10px;
+  position: absolute;
+  left: 80%;
+  margin-top: 2%
+}
+
+>>>>>>> 9f10a4eb403a040825a9e4532526b7d23e4e07a6

@@ -4,21 +4,33 @@
 <ul id="product-list">
     <li ng-repeat="product in category">
         <div class="container">
-            <div class="col-mid-8">
+            <div class="col-md-12">
                 <div ng-model="categoryid" value="{{ product.categoryid }}"></div>
                 <h3 class="cov-font">{{ product.title }}</h3>
                 <p class="cov-font">{{ product.description }}</p>
                 <h4 class="cov-font">{{ product.price | currency }}</h6>
                 <a ng-href="product/{{ product.id }}">
-                <div class="col-md-3">
-                <img ng-src="{{ product.imageurl }}" class="img-responsive img-rounded" alt="Responsive image">
+                <div class="col-md-12">
+                <img src="{{ product.imageurl }}" class="img-responsive  img-rounded" alt="Responsive image">
                 </div>
                 </a>
         </div>
     </li>
 </ul>
+<<<<<<< HEAD
 </div>
 <nav class="navbar navbar-default navbar-fixed-bottom">
   <div class="container">
       <h1> </h1>
   </div>
+=======
+
+<nav class="flex navbar navbar-default navbar-fixed-bottom">
+    <div id="nav-header-box" >
+        <a class="navbar-logo" href="/">
+            <img id="header-logo" src="/images/logo-footer.svg"/>
+        </a>     
+    </div>
+     <p id="copyright">Copyright Covalence LLC</p>
+</nav>
+>>>>>>> 9f10a4eb403a040825a9e4532526b7d23e4e07a6
