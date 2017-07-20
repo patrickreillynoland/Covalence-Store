@@ -17,7 +17,10 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
             } 
         }  
 }])
+<<<<<<< HEAD
 
+=======
+>>>>>>> 31dd34f6e836d66495fe628c08846b3998b2b56b
 .controller('productController', ['SEOService', '$scope', '$location', '$routeParams', 'Product', 'CartItem', function(SEOService, $scope, $location,$routeParams, Product, CartItem){
     SEOService.setSEO({
         title: 'Covalence Gear',
@@ -101,9 +104,13 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
 .controller('CartController', ['$scope', '$location', '$http', 'CartItem', function($scope, $location, $http, CartItem) {
      $scope.items = CartItem.items;
      console.log(items);
+<<<<<<< HEAD
 
     $scope.newItem = {};
         
     $scope.basket = basket;
 
 }])
+=======
+}]);
+>>>>>>> 31dd34f6e836d66495fe628c08846b3998b2b56b

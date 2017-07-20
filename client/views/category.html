@@ -10,8 +10,8 @@
                 <p class="cov-font">{{ product.description }}</p>
                 <h4 class="cov-font">{{ product.price | currency }}</h6>
                 <a ng-href="product/{{ product.id }}">
-                <div class="col-md-12">
-                <img src="{{ product.imageurl }}" class="img-responsive  img-rounded" alt="Responsive image">
+                <div class="col-md-3">
+                <img ng-src="{{ product.imageurl }}" class="img-responsive img-rounded" alt="Responsive image">
                 </div>
                 </a>
         </div>
