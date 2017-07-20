@@ -89,14 +89,7 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
         });
     }
 }])
-<<<<<<< HEAD
 .controller('CartController', ['$scope', '$location', '$http', 'CartItem', function($scope, $location, $http, CartItem) {
      $scope.items = CartItem.items;
      console.log(items);
-=======
-.controller('CartController', ['$scope', '$location', '$http', 'CartService', function($scope, $location, $http, CartService) {
-    $scope.showCart = function() {
-        console.log(cart);
-    }
->>>>>>> 9f10a4eb403a040825a9e4532526b7d23e4e07a6
 }])
