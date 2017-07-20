@@ -17,7 +17,7 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
             } 
         }  
 }])
-.controller('productController', ['SEOService', '$scope', '$location', '$routeParams', 'Product',function(SEOService, $scope, $location,$routeParams, Product){
+.controller('productController', ['SEOService', '$scope', '$location', '$routeParams', 'Product', function(SEOService, $scope, $location, $routeParams, Product){
     SEOService.setSEO({
         title: 'Covalence Gear',
         image: 'http://' + $location.host() + '/images/icon_badge.png',
