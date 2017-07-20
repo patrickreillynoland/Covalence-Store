@@ -62,10 +62,7 @@ ul {
     /* border-radius: 50%; */
     margin: 0;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> mustapha
 
 body { 
     padding-bottom: 70px; 
@@ -96,4 +93,51 @@ body {
     left:50px;
     font-size:1.9em;
     color:#fff;
+}
+
+body, html {
+    height: 100%;
+}
+
+/* The hero image */
+#apparel-hero-image {
+    /* The image used */
+    background-image: url("/images/covalence-store-apparel-hero.jpg");
+    /* Set a specific height */
+    height: 50%;
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+/* Place text in the middle of the image */
+#apparel-hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+#misc-hero-image {
+    /* The image used */
+    background-image: url("/images/covalence-store-apparel-hero.jpg");
+    /* Set a specific height */
+    height: 50%;
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+/* Place text in the middle of the image */
+#misc-hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
 }
