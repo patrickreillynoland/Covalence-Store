@@ -12,6 +12,14 @@ ul {
     font-family: 'BrandonGrotesque-Black', sans-serif;
 }
 
+.flex {
+    display: flex;
+}
+
+.content-right {
+    align-content: right;
+}
+
 /* Index Styling */
 #nav-header-box {
     height: 80px;
