@@ -149,3 +149,15 @@ body, html {
     transform: translate(-50%, -50%);
     color: white;
 }
+.badge{
+    text-align: right;   
+}
+
+#copyright {
+  text-align:right;
+  padding: 10px;
+  position: absolute;
+  left: 80%;
+  margin-top: 2%
+}
+
