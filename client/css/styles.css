@@ -131,13 +131,6 @@ body, html {
     position: relative;
 }
 
-<<<<<<< HEAD
-#product-list {
-   
-=======
-
-
-
 .topnav {
   overflow: hidden;
   background-color: #333;
@@ -182,6 +175,4 @@ body, html {
     display: block;
     text-align: left;
   }
-
->>>>>>> 31dd34f6e836d66495fe628c08846b3998b2b56b
 }
