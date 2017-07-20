@@ -100,8 +100,9 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
     }
 }])
 .controller('CartController', ['$scope', '$location', '$http', 'CartItem', function($scope, $location, $http, CartItem) {
-     $scope.items = CartItem.items;
-     console.log(items);
+    $scope.myItems = JSON.stringify(CartItem.items);
+
+    console.log(items);
 
     $scope.newItem = {};
         
