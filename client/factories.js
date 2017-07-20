@@ -27,11 +27,10 @@ angular.module('CovalenceStore.factories', ['ngRoute', 'ngResource'])
         return items;
     };
     
-    return myBasketService;
+    return basket;
 
     function MyCtrl($scope, basket) {
         $scope.newItem = {};
-        
         $scope.basket = basket;    
         }
 }])
