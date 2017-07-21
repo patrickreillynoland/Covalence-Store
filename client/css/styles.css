@@ -153,6 +153,14 @@ ul {
     vertical-align: middle;
     justify-content: center; 
     text-align: center;
+    margin: 20px;
+}
+#prod-title {
+    float: left;
+}
+#prod-price {
+    float: right;
+    color: #44b6c8;
 }
 #product-div {
     align-content: center;
@@ -221,13 +229,13 @@ body {
 /*welcome page view*/
 #welcometron {
     background: url("/images/covalence-store-home.jpg") no-repeat center center;
-    margin-bottom: 0;
+    margin: 0;
     background-position: center;
     -webkit-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
     -moz-background-size: cover;
-    height: 80vh;
+    height: 100vh;
 }
 /*welcome message top half*/
 #welcome {

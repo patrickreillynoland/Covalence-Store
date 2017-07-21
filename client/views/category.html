@@ -6,12 +6,11 @@
 <div class="container" id="product-list">
     <div id="product-div" ng-repeat="product in category">
          <div id="the-product" class="col-xs-6 col-sm-4 col-md-3 col-lg-2"> 
-                    <h3 class="cov-font">{{ product.title }}</h3>
-                    <p class="cov-font">{{ product.description }}</p>
-                    <h4 class="cov-font">{{ product.price | currency }}</h6>
                     <a ng-href="product/{{ product.id }}">
                         <img ng-src="{{ product.imageurl }}" class="img-responsive img-rounded" alt="Responsive image">
                     </a>
+                    <h5 id="prod-title" class="cov-font">{{ product.title }}</h5>
+                    <h5 id="prod-price" class="cov-font">{{ product.price | currency }}</h5>
         </div>
         <div class="clearfix visible-lg" ng-if="($index + 1) % 6 == 0"></div>
         <div class="clearfix visible-md" ng-if="($index + 1) % 4 == 0"></div>
