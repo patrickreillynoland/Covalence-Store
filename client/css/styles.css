@@ -40,6 +40,10 @@ ul {
     margin-top: 2%;
 }
 
+#nav-links {
+    margin-top:20px;
+}
+
 /* Contact Us */
 #contactus {
     max-width: 500px;

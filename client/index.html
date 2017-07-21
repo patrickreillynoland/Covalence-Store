@@ -25,18 +25,20 @@
     <body>
         <nav class="navbar navbar-default">
             <div class="topnav" id="myTopnav">
-    <div id="nav-header-box" class="navbar-header">
+                <div id="nav-header-box" class="navbar-header">
                     <a class="navbar-logo" href="/">
                         <img id="header-logo" src="/images/logo.svg"/>
                     </a>
-                </div>            
-  <a href="/">Home</a>
-  <a href="/category/1">Apparel</a>
-  <a href="/category/2">Misc</a>
-  <a href="contactus">Contact</a>
-  <a href="/checkout">Checkout</a>
-  <a href="/cart">Cart <span class="badge" ng-controller="CartController">{{ basketCount }}</span></a><
-  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+                </div>
+                <div id="nav-links">          
+                    <a href="/">Home</a>
+                    <a href="/category/1">Apparel</a>
+                    <a href="/category/2">Misc</a>
+                    <a href="contactus">Contact</a>
+                    <a href="/checkout">Checkout</a>
+                    <a href="/cart">Cart <span class="badge" ng-controller="CartController">{{ CartItem.basketCount }}</span></a>
+                    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+                </div>
 </div>
 
 
