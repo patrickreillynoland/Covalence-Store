@@ -40,6 +40,7 @@ ul {
 }
 #nav-header-box {
     height: 80px;
+
 }
 
 #header-logo {
@@ -63,8 +64,14 @@ ul {
 #copyright {
     position: absolute;
     left: 80%;
+    margin-top: 3%;
+    background-color: #F4F4F0;
+    color: #d0d1d3;
+}
+#nav-footer-box {
+    height: 80px;
     margin-top: 2%;
-    color: lightgray;
+
 }
 
 #nav-link-wrap {
@@ -137,6 +144,8 @@ ul {
 }
 .footer {
     position: static;
+    background-color: #F4F4F0;
+    margin-bottom: 0;
 }
 
 /*Category View*/
