@@ -180,3 +180,6 @@ body, html {
     text-align: left;
   }
 }
+.footer {
+    position: static;
+}
