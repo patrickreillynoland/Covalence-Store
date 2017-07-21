@@ -44,6 +44,22 @@ ul {
 #contactus {
     max-width: 500px;
 }
+/*Category View*/
+#item-display {
+    align-content: center;
+    padding: 10px;
+    margin: 10px;
+    vertical-align: middle;
+    justify-content: center;
+}
+
+#the-product {
+    align-content: center;
+    vertical-align: middle;
+    justify-content: center; 
+    text-align: center;
+}
+
 
 /* Checkout Page */
 #checkout-content-box {
