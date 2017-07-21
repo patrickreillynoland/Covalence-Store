@@ -1,13 +1,17 @@
-<ul id="product-list">
-    <li ng-repeat="i in myCart track by $index">
-        <div class="container">
-            <div class="col-mid-8">
-                <img ng-src="{{ i.imageurl }}" class="img-responsive img-rounded cart-image" alt="Responsive image">
-                <h3 class="cov-font">{{ i.title }}</h3>
-                <h3 class="cov-font">{{ i.price | currency }}</h3>
-                <button class="btn btn-info" ng-click="removeItem(i)">Remove Item</button>
+<div class="container">
+    <div id="cart-products">
+        <h3 class="cov-font" ng-hide="basketCount() !== 0">No products yet!</h3>
+        <ul id="product-list">
+            <li ng-repeat="i in myCart track by $index">
+                <div class="container">
+                    <div class="col-mid-8">
+                        <img ng-src="{{ i.imageurl }}" class="img-responsive img-rounded cart-image" alt="Responsive image">
+                        <h3 class="cov-font">{{ i.title }}</h3>
+                        <h3 class="cov-font">{{ i.price | currency }}</h3>
+                        <button class="btn btn-info" ng-click="removeItem(i)">Remove Item</button>
+                        </div>
                 </div>
-                </a>
-        </div>
-    </li>
-</ul>
+            </li>
+        </ul>
+    </div>
+</div>
