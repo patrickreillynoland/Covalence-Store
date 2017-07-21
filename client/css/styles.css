@@ -91,6 +91,7 @@ body {
 .cart-image {
     max-width: 140px;
     float: left;
+    margin: 10px;
 }
 
 /*welcome page view*/
