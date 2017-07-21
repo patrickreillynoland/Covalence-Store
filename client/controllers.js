@@ -29,6 +29,7 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
     $scope.product = Product.get({ id : $routeParams.id });
     $scope.basket = CartItem;
     
+    
 }])
 .controller('CheckoutController', ['SEOService', '$scope', '$location', 'Checkout', 'CartItem', function(SEOService, $scope, $location, Checkout, CartItem) {
     SEOService.setSEO({
