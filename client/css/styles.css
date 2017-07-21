@@ -29,6 +29,9 @@ ul {
     align-content: right;
 }
 
+.view {
+    padding-top: 100px;
+}
 /* Index Styling */
 .navbar {
     position: absolute;
