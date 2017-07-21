@@ -59,6 +59,9 @@ ul {
     justify-content: center; 
     text-align: center;
 }
+#product-div {
+    align-content: center;
+}
 
 
 /* Checkout Page */
