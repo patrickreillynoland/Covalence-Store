@@ -19,7 +19,6 @@ angular.module('CovalenceStore.factories', ['ngRoute', 'ngResource'])
     basket.basketCount = function() {
         return items.length;
     }
-    
     basket.addItem = function(item) {
         items.push(item);
         console.log(items);
@@ -29,7 +28,7 @@ angular.module('CovalenceStore.factories', ['ngRoute', 'ngResource'])
         items.splice(index, 1);
     };
     basket.showItems = function() {
-            return items;
+        return items;
     };
     
     return basket;

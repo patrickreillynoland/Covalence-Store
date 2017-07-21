@@ -94,7 +94,10 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
     }
 }])
 .controller('CartController', ['$scope', '$location', '$http', 'CartItem', function($scope, $location, $http, CartItem) {
+    var basketCount = CartItem.basketCount();
+
+    $scope.basketCount = basketCount;
     $scope.myCart = CartItem.showItems();
-    $scope.basketCount = CartItem.basketCount;
+    $scope.removeItem = CartItem.removeItem();
     $scope.newItem = {};
 }]);

@@ -82,6 +82,13 @@ body {
     padding-bottom: 70px; 
     }
 
+/* Shopping Cart */
+
+.cart-image {
+    max-width: 140px;
+    float: left;
+}
+
 /*welcome page view*/
 #welcometron {
     background-image: url("/images/covalence-store-home.jpg");
