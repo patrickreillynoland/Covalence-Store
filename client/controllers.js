@@ -30,7 +30,7 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
     $scope.basket = CartItem;
     
 }])
-.controller('CheckoutController', ['SEOService', '$scope', '$location', 'Checkout', function(SEOService, $scope, $location, Checkout) {
+.controller('CheckoutController', ['SEOService', '$scope', '$location', 'Checkout', 'CartItem', function(SEOService, $scope, $location, Checkout, CartItem) {
     SEOService.setSEO({
             title: 'Checkout',
             image: 'http://' + $location.host() + '/images/icon_badge.png',
@@ -70,6 +70,9 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
             }
         });
     }
+    $scope.myCart = CartItem.showItems();
+    
+    $scope.removeItem = CartItem.removeItem;
 }])
 .controller('ContactController', ['SEOService', '$scope', '$location', '$http', function(SEOService, $scope, $location, $http) {
     SEOService.setSEO({
@@ -94,10 +97,8 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
     }
 }])
 .controller('CartController', ['$scope', '$location', '$http', 'CartItem', function($scope, $location, $http, CartItem) {
-    var basketCount = CartItem.basketCount();
-
-    $scope.basketCount = basketCount;
     $scope.myCart = CartItem.showItems();
-    $scope.removeItem = CartItem.removeItem();
+    $scope.removeItem = CartItem.removeItem;
+    $scope.basketCount = CartItem.basketCount;
     $scope.newItem = {};
 }]);

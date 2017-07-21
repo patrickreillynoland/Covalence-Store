@@ -12,7 +12,7 @@ angular.module('CovalenceStore.factories', ['ngRoute', 'ngResource'])
 .factory('Checkout', ['$resource', function($resource) {
     return $resource('/api/checkout/:id');
 }])
-.factory('CartItem', ['$rootScope', '$log', function ($rootScope, $log) {
+.factory('CartItem', ['$rootScope', function ($rootScope) {
     var items = [];
     var basket = {};
 

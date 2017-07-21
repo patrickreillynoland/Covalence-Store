@@ -4,8 +4,8 @@
             <div class="col-mid-8">
                 <img ng-src="{{ i.imageurl }}" class="img-responsive img-rounded cart-image" alt="Responsive image">
                 <h3 class="cov-font">{{ i.title }}</h3>
-                <h3>{{ i.price | currency }}</h3>
-                <button ng-click="removeItem()">Remove Item</button>
+                <h3 class="cov-font">{{ i.price | currency }}</h3>
+                <button class="btn btn-info" ng-click="removeItem(i)">Remove Item</button>
                 </div>
                 </a>
         </div>

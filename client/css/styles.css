@@ -40,6 +40,10 @@ ul {
     margin-top: 2%;
 }
 
+#nav-links {
+    margin-top:20px;
+}
+
 /* Contact Us */
 #contactus {
     max-width: 500px;
@@ -106,6 +110,7 @@ body {
 .cart-image {
     max-width: 140px;
     float: left;
+    margin: 10px;
 }
 
 /*welcome page view*/
@@ -198,4 +203,7 @@ body, html {
     display: block;
     text-align: left;
   }
+}
+.footer {
+    position: static;
 }
