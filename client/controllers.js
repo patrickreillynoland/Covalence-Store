@@ -27,8 +27,12 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
         description: 'Quality Covalence gear to show. Wear it proudly.'
     });
     $scope.product = Product.get({ id : $routeParams.id });
-    $scope.basket = CartItem;
-    
+    product = Product.get({ id : $routeParams.id });
+    basket = CartItem;
+    $scope.addtoCart = function() {
+        basket.addItem(product); 
+        window.history.back();
+    }
     
 }])
 .controller('CheckoutController', ['SEOService', '$scope', '$location', 'Checkout', 'CartItem', function(SEOService, $scope, $location, Checkout, CartItem) {
