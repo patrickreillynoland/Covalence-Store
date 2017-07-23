@@ -19,7 +19,7 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
         }
         view();
 }])
-.controller('productController', ['SEOService', '$scope', '$location', '$routeParams', 'Product', 'CartItem', function(SEOService, $scope, $location,$routeParams, Product, CartItem){
+.controller('productController', ['SEOService', '$timeout', '$scope', '$location', '$routeParams', 'Product', 'CartItem', function(SEOService, $timeout, $scope, $location,$routeParams, Product, CartItem){
     SEOService.setSEO({
         title: 'Covalence Gear',
         image: 'http://' + $location.host() + '/images/icon_badge.png',
@@ -27,6 +27,7 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
         description: 'Quality Covalence gear to show. Wear it proudly.'
     });
     $scope.product = Product.get({ id : $routeParams.id });
+<<<<<<< HEAD
     product = Product.get({ id : $routeParams.id });
     basket = CartItem;
     $scope.addtoCart = function() {
@@ -34,6 +35,16 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
         window.history.back();
     }
     
+=======
+    $scope.basket = CartItem;
+    $scope.showAdded = function() {
+        $scope.message = 'Added!';
+        $scope.showMessage = true;
+        $timeout(function() {
+          $scope.showMessage = false;
+        }, 300);
+    }
+>>>>>>> pat-test
 }])
 .controller('CheckoutController', ['SEOService', '$scope', '$location', 'Checkout', 'CartItem', function(SEOService, $scope, $location, Checkout, CartItem) {
     SEOService.setSEO({
@@ -75,9 +86,17 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
             }
         });
     }
-    $scope.myCart = CartItem.showItems();
-    
+    $scope.myCart = CartItem.getItems();
     $scope.removeItem = CartItem.removeItem;
+    $scope.sum = function() {
+        var total = 0;
+        var itemTotal = CartItem.getItems();
+        angular.forEach(itemTotal, function(item, value) {
+            total += item.price;
+        });
+    return total;
+    console.log(total);
+  }
 }])
 .controller('ContactController', ['SEOService', '$scope', '$location', '$http', function(SEOService, $scope, $location, $http) {
     SEOService.setSEO({
@@ -102,7 +121,7 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
     }
 }])
 .controller('CartController', ['$scope', '$location', '$http', 'CartItem', function($scope, $location, $http, CartItem) {
-    $scope.myCart = CartItem.showItems();
+    $scope.myCart = CartItem.getItems();
     $scope.removeItem = CartItem.removeItem;
     $scope.basketCount = CartItem.basketCount;
     $scope.newItem = {};
