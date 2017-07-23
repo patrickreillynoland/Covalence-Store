@@ -38,8 +38,9 @@
                     <div class="form-control" id="card-field"></div>
                 </div>
                 <div class="form-group">
-                    <input class="form-control" type="number" step=".01" ng-model="amount" placeholder="Amount">
-                    <p>Total: {{ sum() }}</p>
+                    <h4 class="cov-font">Subtotal: {{ sum() | currency }}</h3>
+                    <h6 class="cov-font">Tax: {{ sum() * .09 | currency }}</h6>
+                    <h3 class="cov-font" ng-model="amount">Your total: {{ sum() + (sum() * .09) | currency }}
                 </div>
                 <div class="alert alert-danger" role="alert" ng-hide="errorMessage.length === 0">{{ errorMessage }}</div>
                 <!--<div class="alert alert-danger" ng-show="errorMessage.length >= 1" role="alert">{{errorMessage}}</div>-->
