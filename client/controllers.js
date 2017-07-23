@@ -86,7 +86,6 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
             total += item.price;
         });
     return total;
-    console.log(total);
   }
 }])
 .controller('ContactController', ['SEOService', '$scope', '$location', '$http', function(SEOService, $scope, $location, $http) {
