@@ -29,7 +29,7 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
     $scope.product = Product.get({ id : $routeParams.id });
 <<<<<<< HEAD
     product = Product.get({ id : $routeParams.id });
-    basket = CartItem;
+    $scope.basket = CartItem;
     $scope.addtoCart = function() {
         basket.addItem(product); 
         window.history.back();
