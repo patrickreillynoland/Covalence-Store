@@ -17,6 +17,29 @@ ul {
     list-style: none;
 }
 
+.border-box {
+    box-sizing: border-box;
+}
+
+.content-center {
+    align-content: center;
+}
+
+.content-right {
+    align-content: right;
+}
+
+.cov-button {
+    color: #f9f9f9;
+    background-color: #44b6c8;
+    border-color: #082d2b;
+}
+
+.cov-button:hover {
+    color: #e0e0e0;
+    background-color: #489ab3;
+}
+
 .cov-font {
     font-family: 'BrandonGrotesque-Black', sans-serif;
 }
@@ -25,32 +48,42 @@ ul {
     display: flex;
 }
 
-.content-right {
-    align-content: right;
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.left {
+    float: left;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.right {
+    float: right;
+}
+
+.underline {
+    text-decoration: underline;
 }
 
 .view {
     padding-top: 100px;
 }
 
-.fadein.ng-hide-remove,
-.fadeout.ng-hide-add {
-    -webkit-transition: 100ms ease-out all;
-    -moz-transition: 100ms ease-out all;
-    -o-transition: 100ms ease-out all;
-    transition: 100ms ease-out all;
-    display: block !important;
-}
-
-.fadein.ng-hide-remove,
-.fadeout.ng-hide-add.ng-hide-add-active {
-    opacity: 0;
-}
-
-.fadeout.ng-hide-add,
-.fadein.ng-hide-remove.ng-hide-remove-active {
-    opacity: 1;
-}
 
 /* Index Styling */
 .navbar {
@@ -239,20 +272,41 @@ body {
 
 /* Shopping Cart */
 #cart-products {
-    min-height: 400px;
-    width: 30%;
-    position: absolute;
-    background-color: rgba(10, 10, 10, 0.2);
-    border-radius: 5%;
     margin-top: 100px;
-    border: 2px solid darkgrey;
-    text-align: center;
+}
+
+#cart-checkout {
+    margin-top: 100px;
+    background-color: lightgrey;
+    padding: 15px;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+}
+
+@media screen and (max-width: 600px) {
+    #cart-checkout {
+        position: relative;
+        display: none;
+    }
+
+#cart-product {
+    margin-bottom: 10px;
+}
+
+.cart-product-info {
+    margin: 0;
+    font-size: 2em;
 }
 
 .cart-image {
-    max-width: 140px;
+    max-width: 200px;
     float: left;
-    margin: 10px;
+    margin-right: 10px;
+}
+
+.cart-remove-btn {
+    margin-bottom: 10px;
 }
 
 /*welcome page view*/
