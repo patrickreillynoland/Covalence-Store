@@ -21,7 +21,6 @@ angular.module('CovalenceStore.factories', ['ngRoute', 'ngResource'])
     }
     basket.addItem = function(item) {
         items.push(item);
-        console.log(items);
     };
     basket.removeItem = function(item) {
         var index = items.indexOf(item);

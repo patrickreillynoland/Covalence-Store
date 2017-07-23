@@ -19,7 +19,7 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
         }
         view();
 }])
-.controller('productController', ['SEOService', '$scope', '$location', '$routeParams', 'Product', 'CartItem', function(SEOService, $scope, $location,$routeParams, Product, CartItem){
+.controller('productController', ['SEOService', '$timeout', '$scope', '$location', '$routeParams', 'Product', 'CartItem', function(SEOService, $timeout, $scope, $location,$routeParams, Product, CartItem){
     SEOService.setSEO({
         title: 'Covalence Gear',
         image: 'http://' + $location.host() + '/images/icon_badge.png',
@@ -28,8 +28,13 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
     });
     $scope.product = Product.get({ id : $routeParams.id });
     $scope.basket = CartItem;
-    
-    
+    $scope.showAdded = function() {
+        $scope.message = 'Added!';
+        $scope.showMessage = true;
+        $timeout(function() {
+          $scope.showMessage = false;
+        }, 300);
+    }
 }])
 .controller('CheckoutController', ['SEOService', '$scope', '$location', 'Checkout', 'CartItem', function(SEOService, $scope, $location, Checkout, CartItem) {
     SEOService.setSEO({
