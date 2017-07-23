@@ -27,15 +27,6 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
         description: 'Quality Covalence gear to show. Wear it proudly.'
     });
     $scope.product = Product.get({ id : $routeParams.id });
-<<<<<<< HEAD
-    product = Product.get({ id : $routeParams.id });
-    $scope.basket = CartItem;
-    $scope.addtoCart = function() {
-        basket.addItem(product); 
-        window.history.back();
-    }
-    
-=======
     $scope.basket = CartItem;
     $scope.showAdded = function() {
         $scope.message = 'Added!';
@@ -44,7 +35,6 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
           $scope.showMessage = false;
         }, 300);
     }
->>>>>>> pat-test
 }])
 .controller('CheckoutController', ['SEOService', '$scope', '$location', 'Checkout', 'CartItem', function(SEOService, $scope, $location, Checkout, CartItem) {
     SEOService.setSEO({
