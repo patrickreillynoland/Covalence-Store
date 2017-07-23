@@ -26,7 +26,7 @@ angular.module('CovalenceStore.factories', ['ngRoute', 'ngResource'])
         var index = items.indexOf(item);
         items.splice(index, 1);
     };
-    basket.showItems = function() {
+    basket.getItems = function() {
         return items;
     };
     
