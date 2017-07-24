@@ -259,6 +259,11 @@ ul {
     border-radius: 10px;
 }
 
+#checkout-total {
+    border: none;
+    width: 1px;
+}
+
 .list-number-box {
     height: 2em;
     width: 2em;

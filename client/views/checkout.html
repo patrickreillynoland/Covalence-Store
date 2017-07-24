@@ -40,7 +40,9 @@
                 <div class="form-group">
                     <h4 class="cov-font">Subtotal: {{ sum() | currency }}</h3>
                     <h6 class="cov-font">Tax: {{ sum() * .09 | currency }}</h6>
-                    <h3 class="cov-font" ng-model="amount">Your total: {{ sum() + (sum() * .09) | currency }}
+                    <h3 class="cov-font">Your total:
+                    <input id="checkout-total" ng-model="amount" readonly>{{ sum() + (sum() * .09) | currency }}</input>
+                    </h3>
                 </div>
                 <div class="alert alert-danger" role="alert" ng-hide="errorMessage.length === 0">{{ errorMessage }}</div>
                 <!--<div class="alert alert-danger" ng-show="errorMessage.length >= 1" role="alert">{{errorMessage}}</div>-->
