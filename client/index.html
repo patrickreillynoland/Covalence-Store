@@ -31,17 +31,15 @@
                     </a>
                 </div>
                 <div id="main-nav">
-                    <div id="nav-divider"></div> 
-                        <div id="nav-link-wrap">         
-                            <a href="/category/1" class="cov-font nav-link">APPAREL</a>
-                            <a href="/category/2" class="cov-font nav-link">MISC</a>
-                            <a href="/contactus" class="cov-font nav-link">CONTACT</a>
-                        </div>
+                    <div id="nav-link-wrap">
+                        <div id="nav-divider"></div>       
+                        <a href="/category/1" class="cov-font nav-link">APPAREL</a>
+                        <a href="/category/2" class="cov-font nav-link">MISC</a>
+                        <a href="/contactus" class="cov-font nav-link">CONTACT</a>
+                        <a href="/cart"><span class="glyphicon glyphicon-shopping-cart"></span><span id="cart-count" class="badge" ng-controller="CartController">{{ basketCount() }}</span></a></li>
+                        <a href="javascript:void(0);" style="font-size:25px; text-decoration: none;" class="icon" onclick="myFunction()">&#9776;</a>
+                    </div>
                 </div>
-                <ul id="nav-cart">
-                    <li><a href="/cart"><span class="glyphicon glyphicon-shopping-cart"></span><span id="cart-count" class="badge" ng-controller="CartController">{{ basketCount() }}</span></a></li>
-                    <li><a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a></li>
-                </ul>
             </div>
         </nav>
         <div ng-view></div>

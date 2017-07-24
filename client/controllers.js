@@ -113,4 +113,15 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
     $scope.removeItem = CartItem.removeItem;
     $scope.basketCount = CartItem.basketCount;
     $scope.newItem = {};
+    $scope.sum = function() {
+        var total = 0;
+        var itemTotal = CartItem.getItems();
+        angular.forEach(itemTotal, function(item, value) {
+            total += item.price;
+        });
+        return total;
+    }
+}])
+.controller('IndexController', ['$scope', function($scope) {
+    $scope.date = new Date();
 }]);
