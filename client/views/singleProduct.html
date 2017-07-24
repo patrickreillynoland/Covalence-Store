@@ -11,7 +11,7 @@
                     <h3 class="cov-font">{{ product.title }}</h3>
                     <p class="cov-font">{{ product.description }}</p>
                     <input type="submit" class="btn btn-info" value="ADD TO CART" ng-click="basket.addItem(product); showAdded()">
-                    <div ng-model="message" ng-show="showMessage" class="cov-font message fadeout">{{message}}</div>
+                    <div id="added" ng-model="message" ng-show="showMessage" class="cov-font message fadeout">{{message}}</div>
                 </div>
             </div>
         </div>

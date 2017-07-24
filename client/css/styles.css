@@ -1,16 +1,20 @@
 /* INDEX:
 /* 1) Elements and General Classes
 /* 2) Index: Navbar and Footer
-/* 3)
-/* 4) Category View
+/* 3) Category View
+/* 4) Single Product
 /* 5) Contact Us
 /* 6) Checkout
-/* 7)
+/* 7) Welcome Page
 
 /* General Styling */
 @font-face {
     font-family: BrandonGrotesque-Black;
     src: url("BrandonGrotesque-Black.otf") format("opentype");
+}
+
+body, html {
+    height: 100%;
 }
 
 ul {
@@ -247,9 +251,36 @@ ul {
     align-content: center;
 }
 
+#heroimage {
+    margin-bottom: 0;
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 50vh;
+   
+}
+.apparelpic {
+    background-image: url("/images/covalence-store-apparel-hero.jpg");
+}
+.miscpic {
+    background-image: url("/images/covalence-store-misc-hero.jpg");
+}
+
+/* Single Product */
+#added {
+    display: inline;
+}
+
 /* Contact Us */
 #contactus {
     max-width: 500px;
+    margin-left: 30px;
+}
+
+#contact-message {
+    height: 6em;
 }
 
 /* Checkout Page */
@@ -308,6 +339,10 @@ body {
     left: 50%;
 }
 
+#product-list {
+    margin-top: 30px;
+}
+
 @media screen and (max-width: 600px) {
     #cart-checkout {
         position: relative;
@@ -340,7 +375,7 @@ body {
     margin-bottom: 10px;
 }
 
-/*welcome page view*/
+/* Welcome Page*/
 #welcometron {
     background: url("/images/covalence-store-home.jpg") no-repeat center center;
     margin: 0;
@@ -351,38 +386,19 @@ body {
     -moz-background-size: cover;
     height: 100vh;
 }
-/*welcome message top half*/
+
 #welcome {
     margin-top:20%; 
     left:50px;
     font-size:1.8em;
     color:#fff;
 }
-/*welcome message bottom half*/
+
 #store {
     margin-top:1%; 
     left:50px;
     font-size:1.9em;
     color:#fff;
 }
-body, html {
-    height: 100%;
-}
-/* The hero image */
-#heroimage {
-    margin-bottom: 0;
-    /* Position and center the image to scale nicely on all screens */
-    background-position: center center;
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-    height: 50vh;
-   
-}
-.apparelpic {
-    background-image: url("/images/covalence-store-apparel-hero.jpg");
-}
-.miscpic {
-    background-image: url("/images/covalence-store-misc-hero.jpg");
-}
+
 
