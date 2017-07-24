@@ -123,4 +123,7 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
         });
         return total;
     }
+}])
+.controller('IndexController', ['$scope', function($scope) {
+    $scope.date = new Date();
 }]);
