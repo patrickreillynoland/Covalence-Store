@@ -27,7 +27,6 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
         description: 'Quality Covalence gear to show. Wear it proudly.'
     });
     $scope.product = Product.get({ id : $routeParams.id });
-
     $scope.basket = CartItem;
     $scope.showAdded = function() {
         $scope.message = 'Added!';
@@ -37,26 +36,34 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
         }, 300);
     }
 }])
-.controller('CheckoutController', ['SEOService', '$scope', '$location', 'Checkout', 'CartItem', function(SEOService, $scope, $location, Checkout, CartItem) {
+.controller('CheckoutController', ['SEOService', '$scope', '$location', 'Checkout', 'CartItem', '$http', function(SEOService, $scope, $location, Checkout, CartItem, $http) {
     SEOService.setSEO({
             title: 'Checkout',
             image: 'http://' + $location.host() + '/images/icon_badge.png',
             url: $location.url(),
             description: 'Checkout page for all of your quality Covalence products. Thank you for shopping with us.'
     });   
+    $scope.myCart = CartItem.getItems();
+    $scope.removeItem = CartItem.removeItem;
+    $scope.sum = function() {
+        var total = 0;
+        var itemTotal = CartItem.getItems();
+        angular.forEach(itemTotal, function(item, value) {
+            total += item.price;
+        });
+    return total;
+    }  
     var elements = stripe.elements();
     var card = elements.create('card');
     card.mount('#card-field');
-
     $scope.errorMessage = '';
-
-    $scope.processDonation = function() {
-        stripe.createToken(card, {
-            name: $scope.name,
-            address_line1: $scope.line1,
-            address_line2: $scope.line2,
-            address_city: $scope.city,
-            address_state: $scope.state
+    $scope.submitOrder = function() {
+            stripe.createToken(card, {
+                name: $scope.name,
+                address_line1: $scope.line1,
+                address_line2: $scope.line2,
+                address_city: $scope.city,
+                address_state: $scope.state
         }).then(function(result) {
             if (result.error) {
                 $scope.errorMessage = result.error.message;
@@ -71,22 +78,13 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
                 c.$save(function() {
                     alert('Purchase complete! Delivery will take between 2 - 4 weeks.');
                     $location.path('/');
-                }, function(err) {
+                });
+             }
+            }).catch(function(err) {
                     console.log(err);
                 });
-            }
-        });
-    }
-    $scope.myCart = CartItem.getItems();
-    $scope.removeItem = CartItem.removeItem;
-    $scope.sum = function() {
-        var total = 0;
-        var itemTotal = CartItem.getItems();
-        angular.forEach(itemTotal, function(item, value) {
-            total += item.price;
-        });
-    return total;
-  }
+    
+}  
 }])
 .controller('ContactController', ['SEOService', '$scope', '$location', '$http', function(SEOService, $scope, $location, $http) {
     SEOService.setSEO({
