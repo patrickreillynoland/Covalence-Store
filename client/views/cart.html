@@ -1,11 +1,11 @@
 
 <div class="container">
-    <div id="cart-products" class="flex-row col-xs-6 left">
+    <div id="cart-products" class="flex-row col-md-6 col-xs-12 left">
         <h2 class="cov-font text-center underline">Your Shopping Cart</h2>
         <h3 class="cov-font" ng-hide="basketCount() !== 0">No products yet!</h3>
         <ul id="product-list" class="no-padding">
             <li ng-repeat="i in myCart track by $index">
-                <div id="cart-product" class="flex-row col-md-6 col-xs-12 left">
+                <div id="cart-product" class="flex flex-row items-center">
                     <img ng-src="{{ i.imageurl }}" class="img-responsive img-rounded cart-image" alt="Responsive image">
                     <div class="flex flex-column">
                         <h3 class="cov-font cart-product-info">{{ i.title }}</h3>
@@ -24,3 +24,11 @@
         </a>
     </div>
 </div>
+<footer class="flex footer" ng-controller="IndexController">
+    <div id="nav-footer-box">
+        <a class="navbar-logo" href="/">
+            <img id="footer-logo" src="/images/logo-footer.svg"/>
+        </a>     
+    </div>
+    <p class="cov-font" id="copyright">©{{ date | date:'yyyy' }} Covalence LLC</p>
+</footer>

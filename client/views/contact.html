@@ -1,8 +1,8 @@
 <div class="view container">
-<div class="page-header">
-        <h1 class="cov-font">Contact Us</h1>
-</div>
-<form id="contactus" class="my-form" ng-submit="send()">
+    <div class="page-header">
+        <h1 class="cov-font">Contact Covalence</h1>
+    </div>
+	<form id="contactus" class="my-form" ng-submit="send()">
         <div class="form-group">
                 <div class="list-number-box">
                         <h5 class="list-number cov-font">1</h5>
@@ -23,12 +23,21 @@
                     <h3 class="cov-font">Your Message</h3>      
                 </div>
                 <div class="form-group">
-                        <textarea id="contact-message" type="text" ng-model="message" class="form-control" placeholder="Message">
+                        <textarea id="contact-message" type="text" ng-model="message" class="form-control" placeholder="Message"></textarea>
                 </div>
                 <div class="form-group">
-                        <input type="submit" class="btn btn-info pull-right cov-font" value="Send"> 
+                        <input type="submit" class="btn btn-info pull-right cov-font" value="Send"></input>
                 </div>     
         </div>       
-</form>
+	</form>
 </div>
+<footer class="flex footer" ng-controller="IndexController">
+    <div id="nav-footer-box">
+        <a class="navbar-logo" href="/">
+            <img id="footer-logo" src="/images/logo-footer.svg"/>
+        </a>     
+    </div>
+     <p class="cov-font" id="copyright">©{{ date | date:'yyyy' }} Covalence LLC</p>
+</footer>
+
 
