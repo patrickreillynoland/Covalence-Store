@@ -36,7 +36,7 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
         }, 300);
     }
 }])
-.controller('CheckoutController', ['SEOService', '$scope', '$location', 'Checkout', 'CartItem', '$http', function(SEOService, $scope, $location, Checkout, CartItem, $http) {
+.controller('CheckoutController', ['SEOService', '$scope', '$location', 'Checkout', 'CartItem', function(SEOService, $scope, $location, Checkout, CartItem) {
     SEOService.setSEO({
             title: 'Checkout',
             image: 'http://' + $location.host() + '/images/icon_badge.png',
@@ -72,7 +72,9 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
                 console.log(result.token);
                 var c = new Checkout({
                     token: result.token.id,
-                    amount: $scope.amount
+                    amount: $scope.amount,
+                    items: [], // need an actual array of cart items
+                    email: $scope.email
                     //send token and array of prods and prices to api...use that to do sendgrid on the back end
                 });
                 c.$save(function() {
@@ -93,13 +95,16 @@ angular.module('CovalenceStore.controllers', ['ngResource', 'CovalenceStore.fact
         url: $location.url(),
         description: 'We care about what you think! Please, contact us with any questions or concerns.'
     })
+
     $scope.send = function() {
         $http({
             method: 'POST',
             url: '/api/contactus',
-            name: $scope.name,
-            email: $scope.email,
-            message: $scope.content
+            data: {
+                name: $scope.name,
+                email: $scope.email,
+                message: $scope.message
+            }
         }).then(function(success) {
             alert('Message Sent');
             $location.path('/');
